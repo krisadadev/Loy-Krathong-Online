@@ -110,7 +110,9 @@ h2{font-weight:500;font-size:clamp(1.25rem,4vw,1.6rem);margin-bottom:.3rem;color
 .actions{position:absolute;bottom:34px;left:0;right:0;opacity:0;transition:opacity 1.2s;pointer-events:none!important}
 .actions.on{opacity:1;pointer-events:auto!important}
 .actions .btn{pointer-events:auto}
-.credit{position:fixed;bottom:10px;right:14px;max-width:calc(100% - 28px);text-align:right;font-size:.72rem;color:rgba(255,255,255,.55);z-index:11;pointer-events:none;text-shadow:0 1px 6px rgba(0,0,0,.8);opacity:0;transition:opacity .8s}
+.credit{position:fixed;bottom:10px;left:14px;max-width:62%;text-align:left;font-size:.72rem;color:rgba(255,255,255,.55);z-index:11;pointer-events:none;text-shadow:0 1px 6px rgba(0,0,0,.8);opacity:0;transition:opacity .8s}
+.lic{position:fixed;bottom:10px;right:14px;max-width:34%;text-align:right;font-size:.72rem;color:rgba(255,255,255,.55);z-index:11;text-shadow:0 1px 6px rgba(0,0,0,.8)}
+.lic a{color:#ffe0a0;text-decoration:underline}
 .credit.on{opacity:1}
 .credit.on a{pointer-events:auto}
 .credit a{color:#ffe0a0;text-decoration:underline}
@@ -173,6 +175,7 @@ h2{font-weight:500;font-size:clamp(1.25rem,4vw,1.6rem);margin-bottom:.3rem;color
   </section>
 </div>
 <div id="histWrap"><div class="panel"><h2>กระทงที่ลอยไปแล้ว</h2><p class="sub">ผู้ที่ใส่ชื่อ กระทงจะลอยอยู่บนผืนน้ำพร้อมป้ายชื่อ</p><ul id="histList"></ul><div class="row"><button class="btn" id="histClose">ปิด</button></div></div></div>
+<div class="lic">© 2026 krisadadev · <a href="https://github.com/krisadadev/Loy-Krathong-Online/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a></div>
 <div class="credit" id="credit">🎵 ขอบคุณเพลงเพราะๆ จาก <a href="https://www.youtube.com/watch?v=X80o4uXSkOs" target="_blank" rel="noopener noreferrer">Fino the Ranad</a></div>
 
 <script>
