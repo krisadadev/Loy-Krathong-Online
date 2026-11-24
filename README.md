@@ -87,3 +87,9 @@ mysql -u root -p loy_krathong < schema.sql
 - ล้างทั้งหมด: `TRUNCATE TABLE loy_krathong;`
 - สำรองข้อมูล: phpMyAdmin → Export (หรือ `mysqldump -u root -p loy_krathong > backup.sql`)
 - หน้าเว็บแสดงกระทงล่าสุด 60 ดวง และรีเฟรชทุก 30 วินาที
+
+## เครดิตเพลง
+
+เพลงประกอบเล่นจากวิดีโอ YouTube “รำวงวันลอยกระทง ดนตรีไทยบรรเลงยาว ๆ | ระนาดเอก” ของช่อง **Fino the Ranad**
+(https://www.youtube.com/watch?v=X80o4uXSkOs) ลิขสิทธิ์เป็นของเจ้าของช่อง ระบบฝังเพลงผ่าน YouTube Player อย่างเป็นทางการ และแสดงข้อความขอบคุณที่ท้ายหน้าเว็บเฉพาะหน้าที่เปิดเพลง (ไม่แสดงในหน้าแรก)
+หากต้องการเปลี่ยนเพลง ให้แก้ค่า `SONG_ID` ใน `index.html` และข้อความเครดิตที่ท้ายไฟล์ (`id="credit"`)

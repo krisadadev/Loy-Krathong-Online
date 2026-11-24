@@ -110,7 +110,10 @@ h2{font-weight:500;font-size:clamp(1.25rem,4vw,1.6rem);margin-bottom:.3rem;color
 .actions{position:absolute;bottom:34px;left:0;right:0;opacity:0;transition:opacity 1.2s;pointer-events:none!important}
 .actions.on{opacity:1;pointer-events:auto!important}
 .actions .btn{pointer-events:auto}
-.credit{position:fixed;bottom:10px;left:0;right:0;text-align:center;font-size:.7rem;color:rgba(255,255,255,.28);z-index:11;pointer-events:none}
+.credit{position:fixed;bottom:10px;right:14px;max-width:calc(100% - 28px);text-align:right;font-size:.72rem;color:rgba(255,255,255,.55);z-index:11;pointer-events:none;text-shadow:0 1px 6px rgba(0,0,0,.8);opacity:0;transition:opacity .8s}
+.credit.on{opacity:1}
+.credit.on a{pointer-events:auto}
+.credit a{color:#ffe0a0;text-decoration:underline}
 </style>
 </head>
 <body>
@@ -170,7 +173,7 @@ h2{font-weight:500;font-size:clamp(1.25rem,4vw,1.6rem);margin-bottom:.3rem;color
   </section>
 </div>
 <div id="histWrap"><div class="panel"><h2>กระทงที่ลอยไปแล้ว</h2><p class="sub">ผู้ที่ใส่ชื่อ กระทงจะลอยอยู่บนผืนน้ำพร้อมป้ายชื่อ</p><ul id="histList"></ul><div class="row"><button class="btn" id="histClose">ปิด</button></div></div></div>
-<div class="credit" id="credit"></div>
+<div class="credit" id="credit">🎵 ขอบคุณเพลงเพราะๆ จาก <a href="https://www.youtube.com/watch?v=X80o4uXSkOs" target="_blank" rel="noopener noreferrer">Fino the Ranad</a></div>
 
 <script>
 (()=>{
@@ -613,7 +616,7 @@ const S={stage:0,theme:'lotus',lit:false,free:false};
 const timers=[];const later=(fn,ms)=>timers.push(setTimeout(fn,ms));
 const stepEls=[...document.querySelectorAll('#steps span')];
 function go(n){
-  S.stage=n;
+  S.stage=n;$('#credit').classList.toggle('on',n!==0);   // แสดงเครดิตเพลงเฉพาะหน้าที่เปิดเพลง
   document.querySelectorAll('.stage').forEach(el=>el.classList.toggle('active',+el.dataset.s===n));
   G=n===5;if(n===0){synthOn=false;stopSong();duckSynth(true);}if(n!==4&&hideKey){hideKey=null;syncHistory();}$('#steps').classList.toggle('on',n>=1&&n<=4);
   stepEls.forEach((el,i)=>{el.classList.toggle('cur',i===n-1);el.classList.toggle('done',i<n-1);});
