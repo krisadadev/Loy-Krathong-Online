@@ -1,0 +1,4 @@
+# ไม่ให้เปิดดูไฟล์ตั้งค่า/ไฟล์ SQL/คู่มือ ผ่านเว็บ (Apache)
+<FilesMatch "^(config\.php|schema\.sql|README\.md)$">
+    Require all denied
+</FilesMatch>
